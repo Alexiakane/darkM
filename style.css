@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+}
+:root {
+    --colors-white: #f198ed;
+    --colors-black: #571d99;
+    --colors-primary: var(--colors-black);
+    --colors-secondary: var(--colors-white);
+    --border-radius-full: 3vh;
+  }
+  
+  [data-theme-preference="dark"] {
+    --colors-primary: var(--colors-white);
+    --colors-secondary: var(--colors-black);
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
+
+  .theme-switcher {
+    --theme-switcher-radius: 4vh;
+    --theme-switcher-border: var(--colors-black);
+    --theme-switcher-border-size: 3px;
+    --theme-switcher-background: var(--colors-black);
+    --theme-switcher-icon-size: 3vh;
+    --theme-switcher-icon-color: var(--colors-white);
+    --theme-switcher-icon-background: #faeda4;
+  
+    display: inline-grid;
+    justify-content: start;
+    width: calc(var(--theme-switcher-icon-size) * 2 + var(--theme-switcher-border-size) * 2);
+    padding: var(--theme-switcher-border-size);
+    border: 0;
+    border-radius: var(--theme-switcher-radius);
+    background-color: var(--theme-switcher-background);
+    line-height: 0;
+    cursor: pointer;
+    outline-offset: 0.5em;
+    outline-color: currentColor;
+  
+    & * {
+      pointer-events: none;
+    }
+  
+    & > .theme-icon {
+      padding: var(--theme-switcher-border-size);
+      border-radius: var(--border-radius-full);
+      transition: 0.3s translate;
+      color: var(--theme-switcher-icon-color);
+      background-color: var(--theme-switcher-icon-background);
+    }
+  
+    & [class^="theme-icon-"] {
+      width: var(--theme-switcher-icon-size);
+      height: var(--theme-switcher-icon-size);
+    }
+  
+    &[aria-pressed="true"] {
+      --theme-switcher-border: #f78fe0;
+      --theme-switcher-background: #f78fe0;
+      --theme-switcher-icon-background: var(--colors-black);
+  
+      & .theme-icon-light {
+        display: none;
+      }
+  
+      & > .theme-icon {
+        translate: calc(var(--theme-switcher-icon-size) - (var(--theme-switcher-border-size) * 2));
+      }
+    }
+  
+    &[aria-pressed="false"] {
+      & .theme-icon-dark {
+        display: none;
+      }
+    }
+  }
+  html {
+    color: var(--colors-primary);
+    background-color: var(--colors-secondary);
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  code {
+    font-size: inherit;
+  }
+   
+#headImg {
+    background-image: url(image/ban.jpg);
+    background-size: cover;
+    height: 10vh;
+    align-content: center;
+}
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+.navb {
+ text-decoration: none;
+ color: rgb(239, 253, 157);
+ font-size: 4vh;
+}
+.navb:hover {
+    color: rgb(240, 93, 203);
+}
+#heroB {
+    background-color: rgb(255, 255, 175);
+    height: 20vh;
+    align-content: center;
+    text-align: center;
+}
+#title {
+    font-size: 10vh;
+    color: rgb(172, 54, 172);
+}
+#parag {
+    height: 70vh;
+}
+.divP {
+    font-size: 3vh;
+}
+#one {
+    border: 1vh solid rgb(230, 107, 107);
+    height: 15vh;
+    text-align: center;
+    align-content: center;
+}
+#two {
+    border: 1vh double rgb(253, 212, 219);
+    height: 15vh;
+    text-align: center;
+    align-content: center;
+}
+#three {
+    border: 1vh solid rgb(245, 68, 98);
+    height: 15vh;
+    text-align: center;
+    align-content: center;
+}
