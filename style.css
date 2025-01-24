@@ -3,20 +3,20 @@
 }
 
 :root {
-    --colors-white: #f8c0ea;
-    --colors-black: #a255eb;
+    --colors-pink: #f8c0ea;
+    --colors-violet: #a255eb;
     --colors-yellow: #faeda4;
     --colors-purple: #571d99;
-    --colors-primary: var(--colors-black);
-    --colors-secondary: var(--colors-white);
+    --colors-primary: var(--colors-violet);
+    --colors-secondary: var(--colors-pink);
     --colors-third: var(--colors-yellow);
     --colors-fourth: var(--colors-purple);
     --border-radius-full: 3vh;
 }
 
 [data-theme-preference="dark"] {
-    --colors-primary: var(--colors-white);
-    --colors-secondary: var(--colors-black);
+    --colors-primary: var(--colors-pink);
+    --colors-secondary: var(--colors-violet);
     --colors-third: var(--colors-purple);
     --colors-fourth: var(--colors-yellow);
 }
@@ -29,11 +29,11 @@
 
 .theme-switcher {
     --theme-switcher-radius: 4vh;
-    --theme-switcher-border: var(--colors-black);
+    --theme-switcher-border: var(--colors-violet);
     --theme-switcher-border-size: 3px;
-    --theme-switcher-background: var(--colors-black);
+    --theme-switcher-background: var(--colors-violet);
     --theme-switcher-icon-size: 3vh;
-    --theme-switcher-icon-color: var(--colors-white);
+    --theme-switcher-icon-color: var(--colors-pink);
     --theme-switcher-icon-background: #faeda4;
 
     display: inline-grid;
@@ -68,7 +68,7 @@
     &[aria-pressed="true"] {
         --theme-switcher-border: #f78fe0;
         --theme-switcher-background: #f78fe0;
-        --theme-switcher-icon-background: var(--colors-black);
+        --theme-switcher-icon-background: var(--colors-violet);
 
         & .theme-icon-light {
             display: none;
