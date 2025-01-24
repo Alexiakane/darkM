@@ -2,7 +2,7 @@
     margin: 0;
 }
 :root {
-    --colors-white: #f198ed;
+    --colors-white: #fc9be4;
     --colors-black: #571d99;
     --colors-primary: var(--colors-black);
     --colors-secondary: var(--colors-white);
@@ -79,8 +79,8 @@
     }
   }
   html {
-    color: var(--colors-primary);
-    background-color: var(--colors-secondary);
+    color: var(--colors-secondary);
+    background-color: var(--colors-primary);
   }
 
   .visually-hidden {
@@ -141,16 +141,22 @@
     height: 15vh;
     text-align: center;
     align-content: center;
+    color: var(--colors-primary);
+    background-color: var(--colors-secondary);
 }
 #two {
     border: 1vh double rgb(253, 212, 219);
     height: 15vh;
     text-align: center;
     align-content: center;
+    color: var(--colors-secondary);
+    background-color: var(--colors-primary);
 }
 #three {
     border: 1vh solid rgb(245, 68, 98);
     height: 15vh;
     text-align: center;
     align-content: center;
+    color: var(--colors-primary);
+    background-color: var(--colors-secondary);
 }
